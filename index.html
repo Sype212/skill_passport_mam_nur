@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mohammad Ali Ridho</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration verbatim as mandated with Red #FE0000 primary accent -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#464747",
+                        "tertiary-container": "#a15100",
+                        "surface-container-low": "#1c1b1b",
+                        "primary": "#FE0000",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#484949",
+                        "surface-container": "#201f1f",
+                        "surface-bright": "#3a3939",
+                        "surface-dim": "#131313",
+                        "secondary": "#c7c6c6",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#301400",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#FE0000",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#ffe0cd",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#ffebee",
+                        "on-primary": "#ffffff",
+                        "outline": "#958da1",
+                        "on-tertiary": "#4f2500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary": "#ffb784",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-background": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "on-primary-fixed-variant": "#b90000",
+                        "on-primary-fixed": "#4a0000",
+                        "background": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#FE0000",
+                        "secondary-fixed": "#e3e2e2",
+                        "on-secondary-container": "#b8b8b8",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffdcc6",
+                        "primary-fixed": "#ffdad8",
+                        "tertiary-fixed-dim": "#ffb784",
+                        "on-surface-variant": "#ccc3d8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline-variant": "#4a4455",
+                        "primary-container": "#FE0000",
+                        "inverse-primary": "#e60000",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "gutter-mobile": "1rem",
+                        "space-xs": "0.5rem",
+                        "space-sm": "0.75rem",
+                        "space-md": "1rem",
+                        "space-lg": "1.5rem",
+                        "space-xl": "2rem",
+                        "margin": "3rem",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "display": ["Inter", "sans-serif"],
+                        "headline-sm": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "display-mobile": ["Inter", "sans-serif"],
+                        "mono-sm": ["JetBrains Mono", "monospace"],
+                        "label-meta": ["JetBrains Mono", "monospace"],
+                        "mono-lg": ["JetBrains Mono", "monospace"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "headline-sm": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+                        "mono-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-meta": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "500" }],
+                        "mono-lg": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+                        "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+                        "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+        }
+
+        .custom-grid-pattern {
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(74, 68, 85, 0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(74, 68, 85, 0.15) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#0A0A0A] text-on-surface antialiased selection:bg-[#FE0000] selection:text-white relative min-h-screen">
+    <!-- ================= TOPNAVBAR (Shared Components JSON Anchor) ================= -->
+    <header
+        class="bg-surface-dim dark:bg-surface-dim docked full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline-variant">
+        <div class="flex justify-between items-center w-full px-6 md:px-12 max-w-7xl mx-auto h-16">
+            <!-- Brand Logo / Product Name from JSON -->
+            <a class="flex items-center gap-3" href="#home">
+                <span
+                    class="font-mono-lg text-mono-lg text-on-surface dark:text-on-surface font-semibold tracking-tight hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150">
+                    M. Ali Ridho // sys.dev
+                </span>
+            </a>
+            <!-- Navigation Links from JSON -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-[#FE0000] dark:text-[#FE0000] font-mono-sm text-mono-sm border-b-2 border-[#FE0000] pb-1 transition-colors duration-150 ease-out active:scale-95"
+                    href="#home">Home</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="#about">About</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="#skills">Skills</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="#projects">Projects</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="#experience">Experience</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="#contact">Contact</a>
+            </nav>
+            <!-- Trailing actions and status -->
+            <div class="flex items-center gap-4">
+                <!-- Secondary Action: Available for work indicator -->
+                <div
+                    class="hidden lg:flex items-center gap-2 px-2.5 py-1 bg-[#111111] border border-outline-variant/50 rounded">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="font-label-meta text-label-meta text-secondary">Available for work</span>
+                </div>
+                <!-- Trailing Icons: terminal, code -->
+                <div class="hidden sm:flex items-center gap-1 text-secondary">
+                    <span
+                        class="material-symbols-outlined text-base p-1.5 hover:text-[#FE0000] cursor-pointer transition-colors"
+                        title="sys.terminal">terminal</span>
+                    <span
+                        class="material-symbols-outlined text-base p-1.5 hover:text-[#FE0000] cursor-pointer transition-colors"
+                        title="source.code">code</span>
+                </div>
+                <!-- Trailing Primary Action: Get in Touch -->
+                <a class="px-4 py-1.5 rounded-lg bg-[#FE0000] text-white font-mono-sm text-mono-sm hover:bg-[#D90000] transition-all shadow-[0_0_16px_rgba(254,0,0,0.35)] active:scale-95"
+                    href="#contact">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="relative z-10">
+        <!-- 1. HERO SECTION -->
+        <section
+            class="relative min-h-[calc(100vh-4rem)] flex items-center border-b border-[#262626] overflow-hidden custom-grid-pattern"
+            id="home">
+            <div
+                class="max-w-7xl mx-auto px-6 md:px-12 py-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Statement & Narrative -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div
+                        class="inline-flex items-center gap-2 self-start px-3 py-1 bg-[#111111] border border-[#262626] rounded">
+                        <span class="material-symbols-outlined text-[#FE0000] text-sm">terminal</span>
+                        <span class="font-mono-sm text-mono-sm text-[#FE0000] tracking-wider uppercase">SYS.VERSION //
+                            2025.1</span>
+                        <span class="text-outline-variant font-mono-sm">|</span>
+                        <span class="font-mono-sm text-mono-sm text-secondary">ID // IDN_EAST</span>
+                    </div>
+                    <div>
+                        <h1
+                            class="font-headline-lg-mobile md:font-display text-headline-lg-mobile md:text-display text-[#F5F5F5] tracking-tight">
+                            Mohammad Ali Ridho
+                        </h1>
+                        <p class="font-headline-md text-headline-md text-[#FE0000] mt-1">
+                            Software Engineering &amp; System Builder
+                        </p>
+                        <p class="font-mono-sm text-mono-sm text-secondary/70 mt-2 italic">
+                            // “masi ada hari besok”
+                        </p>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+                        Mengembangkan perangkat lunak dengan pendekatan logis dan analitis. Terbiasa menangani
+                        implementasi algoritma, integrasi logika aplikasi, manajemen kontrol versi (Git), hingga
+                        eksplorasi alur kerja digital untuk menghasilkan solusi teknologi yang reliabel dan siap pakai.
+                    </p>
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#FE0000] text-white font-mono-lg text-mono-lg hover:bg-[#D90000] transition-all shadow-[0_4px_20px_-2px_rgba(254,0,0,0.25)] active:scale-95"
+                            href="#projects">
+                            <span>View Projects</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                        <a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#151515] border border-[#262626] text-on-surface font-mono-lg text-mono-lg hover:bg-[#1A1A1A] hover:border-[#333333] transition-all active:scale-95"
+                            href="#contact">
+                            <span>Contact Me</span>
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                    <!-- Bottom Telemetry Metric Ticker -->
+                    <div class="pt-6 border-t border-[#262626] grid grid-cols-3 gap-4 max-w-lg">
+                        <div>
+                            <span class="block font-mono-sm text-mono-sm text-secondary/60">ARCHITECTURE</span>
+                            <span class="font-mono-lg text-mono-lg text-on-surface font-medium">Modular API</span>
+                        </div>
+                        <div>
+                            <span class="block font-mono-sm text-mono-sm text-secondary/60">STACK FOCUS</span>
+                            <span class="font-mono-lg text-mono-lg text-on-surface font-medium">C# / PHP / Linux</span>
+                        </div>
+                        <div>
+                            <span class="block font-mono-sm text-mono-sm text-secondary/60">RUN STATE</span>
+                            <span class="font-mono-lg text-mono-lg text-emerald-400 font-medium">Active 100%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Technical System Architecture Console -->
+                <div class="lg:col-span-5">
+                    <div class="bg-[#151515] border border-[#262626] rounded-xl overflow-hidden shadow-2xl">
+                        <!-- IDE/Console Header Bar -->
+                        <div class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-[#353534]"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#353534]"></span>
+                                <span class="w-3 h-3 rounded-full bg-[#353534]"></span>
+                                <span
+                                    class="font-label-meta text-label-meta text-secondary/60 ml-2">sys_pipeline.graph</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-mono-sm text-mono-sm text-[#FE0000]">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#FE0000] animate-ping"></span>
+                                <span>ONLINE</span>
+                            </div>
+                        </div>
+                        <!-- Visual Graph / Pipeline SVG Mockup -->
+                        <div class="p-6 bg-[#0E0E0E]/90 flex flex-col gap-4">
+                            <!-- Node 1: Client/Engine -->
+                            <div
+                                class="p-3 bg-[#151515] border border-[#262626] rounded-lg flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-[#FE0000] text-lg">videogame_asset</span>
+                                    <div>
+                                        <div class="font-mono-sm text-mono-sm text-on-surface font-medium">Unity Engine
+                                            / C#</div>
+                                        <div class="font-label-meta text-label-meta text-secondary/60">Simulations &amp;
+                                            Game Mechanics</div>
+                                    </div>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/40">2D
+                                    Physics</span>
+                            </div>
+                            <!-- Connecting Bus -->
+                            <div class="flex justify-center my--2">
+                                <div class="w-px h-6 bg-gradient-to-b from-[#262626] via-[#FE0000] to-[#262626]"></div>
+                            </div>
+                            <!-- Node 2: Core Application & Routing -->
+                            <div
+                                class="p-3 bg-[#1A1A1A] border border-[#FE0000]/40 rounded-lg flex items-center justify-between shadow-[0_0_12px_rgba(254,0,0,0.15)]">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-lg">dns</span>
+                                    <div>
+                                        <div class="font-mono-sm text-mono-sm text-on-surface font-medium">Laravel REST
+                                            API v1</div>
+                                        <div class="font-label-meta text-label-meta text-secondary/60">Sanctum Token
+                                            Auth &amp; Controllers</div>
+                                    </div>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-[#FE0000] bg-[#FE0000]/10 px-2 py-0.5 rounded border border-[#FE0000]/30">Backend
+                                    Core</span>
+                            </div>
+                            <!-- Connecting Bus -->
+                            <div class="flex justify-center my--2">
+                                <div class="w-px h-6 bg-gradient-to-b from-[#262626] via-[#FE0000] to-[#262626]"></div>
+                            </div>
+                            <!-- Node 3: Database & Storage Engine -->
+                            <div
+                                class="p-3 bg-[#151515] border border-[#262626] rounded-lg flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-lg">database</span>
+                                    <div>
+                                        <div class="font-mono-sm text-mono-sm text-on-surface font-medium">MySQL
+                                            Relational DB</div>
+                                        <div class="font-label-meta text-label-meta text-secondary/60">Normalized Schema
+                                            &amp; Indexes</div>
+                                    </div>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-secondary bg-[#201f1f] px-2 py-0.5 rounded border border-[#353534]">InnoDB
+                                    Engine</span>
+                            </div>
+                            <!-- Terminal Output Footer -->
+                            <div
+                                class="mt-2 pt-3 border-t border-[#262626] font-mono-sm text-mono-sm text-secondary/70 flex items-center justify-between">
+                                <span class="text-[#FE0000] font-mono-sm">$ netstat --tcp --listen</span>
+                                <span class="font-label-meta text-label-meta text-secondary/60">PORT 8080 : 3306</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 2. ABOUT SECTION -->
+        <section class="py-24 border-b border-[#262626] bg-[#0A0A0A]" id="about">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <!-- Header -->
+                <div class="flex flex-col gap-2 mb-12">
+                    <div class="font-mono-sm text-mono-sm text-[#FE0000] tracking-widest uppercase">01 // ABOUT</div>
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-[#F5F5F5]">
+                        Profile &amp; Background
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Narrative Box -->
+                    <div class="lg:col-span-7 bg-[#151515] border border-[#262626] rounded-xl p-8 flex flex-col gap-6">
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                            Engineering Mindset &amp; Practical Problem Solving
+                        </h3>
+                        <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            Memiliki dedikasi tinggi dalam memahami cara kerja sistem komputer secara mendalam—mulai
+                            dari tingkat logika pemrograman hingga lapisan infrastruktur jaringan. Berfokus pada
+                            penulisan kode yang rapi, arsitektur terstruktur, dan penerapan alur kerja berbasis Git yang
+                            konsisten.
+                        </p>
+                        <p class="font-body-md text-body-md text-secondary/90 leading-relaxed">
+                            Selalu terdorong untuk mengeksplorasi bagaimana aplikasi backend, logika game engine, dan
+                            konfigurasi server dapat disinergikan secara efisien. Menghargai proses debugging yang
+                            teliti dan implementasi praktis yang dapat diandalkan dalam skenario operasional nyata.
+                        </p>
+                        <!-- Philosophy Badge Row -->
+                        <div class="pt-4 border-t border-[#262626] flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">#
+                                LOGICAL_ANALYSIS</span>
+                            <span
+                                class="px-3 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">#
+                                RELIABLE_SYSTEMS</span>
+                            <span
+                                class="px-3 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">#
+                                GIT_VERSION_CONTROL</span>
+                            <span
+                                class="px-3 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">#
+                                DISCIPLINED_EXECUTION</span>
+                        </div>
+                    </div>
+                    <!-- Metadata Telemetry Panel -->
+                    <div class="lg:col-span-5 bg-[#151515] border border-[#262626] rounded-xl overflow-hidden">
+                        <div class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                            <span class="font-label-meta text-label-meta text-secondary/70">METADATA //
+                                IDENTIFICATION</span>
+                            <span class="material-symbols-outlined text-secondary/70 text-sm">badge</span>
+                        </div>
+                        <div class="p-6 divide-y divide-[#1F1F1F]">
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="font-mono-sm text-mono-sm text-secondary/70">LOCATION</span>
+                                <span
+                                    class="font-mono-sm text-mono-sm text-on-surface font-medium flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-xs text-[#FE0000]">pin_drop</span>
+                                    Indonesia
+                                </span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="font-mono-sm text-mono-sm text-secondary/70">EDUCATION</span>
+                                <span class="font-mono-sm text-mono-sm text-on-surface font-medium text-right">SMK Tunas
+                                    Harapan Pati</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="font-mono-sm text-mono-sm text-secondary/70">MAJOR</span>
+                                <span class="font-mono-sm text-mono-sm text-[#FE0000] font-medium text-right">Teknik
+                                    Jaringan Komputer &amp; Telekomunikasi (TJKT)</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="font-mono-sm text-mono-sm text-secondary/70">FOCUS</span>
+                                <span class="font-mono-sm text-mono-sm text-on-surface font-medium text-right">Software
+                                    Eng &amp; Architecture</span>
+                            </div>
+                            <div class="py-3 flex justify-between items-center">
+                                <span class="font-mono-sm text-mono-sm text-secondary/70">STATUS</span>
+                                <span
+                                    class="font-mono-sm text-mono-sm text-emerald-400 font-medium flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                    Actively Building &amp; Learning
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 3. SKILLS SECTION -->
+        <section class="py-24 border-b border-[#262626] bg-[#0E0E0E]" id="skills">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <!-- Section Header -->
+                <div class="flex flex-col gap-2 mb-12">
+                    <div class="font-mono-sm text-mono-sm text-[#FE0000] tracking-widest uppercase">02 // CAPABILITIES
+                    </div>
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-[#F5F5F5]">
+                        Technical Stack &amp; Disciplines
+                    </h2>
+                    <p class="font-body-md text-body-md text-secondary">
+                        Strict structural competence across application logic, systems administration, and tools.
+                    </p>
+                </div>
+                <!-- 5 Category Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1: Technical & Systems -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl p-6 hover:border-[#333333] transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-[#262626] mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-base">memory</span>
+                                    <span
+                                        class="font-mono-sm text-mono-sm text-on-surface font-medium uppercase">TECHNICAL
+                                        &amp; OS</span>
+                                </div>
+                                <span class="font-label-meta text-label-meta text-secondary/60">SYS_01</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary/80 mb-4">
+                                Core operating environments, workstation architecture, and diagnostics.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Hardware
+                                Troubleshooting</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Software
+                                Troubleshooting</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-[#FE0000]">Linux
+                                / Debian</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Windows
+                                Systems</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-[#FE0000]">Git
+                                &amp; Version Control</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Server
+                                Fundamentals</span>
+                        </div>
+                    </div>
+                    <!-- Card 2: Development & Engineering -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl p-6 hover:border-[#333333] transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-[#262626] mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-base">code_blocks</span>
+                                    <span
+                                        class="font-mono-sm text-mono-sm text-on-surface font-medium uppercase">DEVELOPMENT</span>
+                                </div>
+                                <span class="font-label-meta text-label-meta text-secondary/60">DEV_02</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary/80 mb-4">
+                                Application programming, backend services, schema design, and scripting.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#FE0000]/40 rounded font-mono-sm text-mono-sm text-[#FE0000]">C#</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">PHP</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#FE0000]/40 rounded font-mono-sm text-mono-sm text-[#FE0000]">Laravel</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">.NET
+                                API</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#FE0000]/40 rounded font-mono-sm text-mono-sm text-[#FE0000]">REST
+                                API</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">MySQL</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Web
+                                Dev Basics</span>
+                        </div>
+                    </div>
+                    <!-- Card 3: Networking & Infrastructure -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl p-6 hover:border-[#333333] transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-[#262626] mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-base">hub</span>
+                                    <span
+                                        class="font-mono-sm text-mono-sm text-on-surface font-medium uppercase">NETWORKING</span>
+                                </div>
+                                <span class="font-label-meta text-label-meta text-secondary/60">NET_03</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary/80 mb-4">
+                                Foundations in routing, switching, topology planning, and network administration.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Basic
+                                Networking</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-[#FE0000]">Network
+                                Configuration</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Linux
+                                / Debian CLI</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Server
+                                Fundamentals</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-secondary">IPv4
+                                Subnetting</span>
+                        </div>
+                    </div>
+                    <!-- Card 4: Tools & Environments -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl p-6 hover:border-[#333333] transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-[#262626] mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-base">terminal</span>
+                                    <span class="font-mono-sm text-mono-sm text-on-surface font-medium uppercase">TOOLS
+                                        &amp; ENVIRONMENT</span>
+                                </div>
+                                <span class="font-label-meta text-label-meta text-secondary/60">TOOL_04</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary/80 mb-4">
+                                Daily operational toolchains, compilers, editors, and local host runtimes.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-[#FE0000]">VS
+                                Code</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Visual
+                                Studio</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Laragon</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#FE0000]/40 rounded font-mono-sm text-mono-sm text-[#FE0000]">Unity
+                                Engine</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">Android
+                                Studio</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-secondary">Git
+                                CLI</span>
+                        </div>
+                    </div>
+                    <!-- Card 5: Creative Media Production -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl p-6 hover:border-[#333333] transition-all flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-[#262626] mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[#FE0000] text-base">movie_edit</span>
+                                    <span
+                                        class="font-mono-sm text-mono-sm text-on-surface font-medium uppercase">CREATIVE
+                                        PRODUCTION</span>
+                                </div>
+                                <span class="font-label-meta text-label-meta text-secondary/60">MED_05</span>
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary/80 mb-4">
+                                Media production background, timeline pacing, post-processing, and visual
+                                communications.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-[#FE0000]">Video
+                                Editing</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-on-surface">CapCut</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#FE0000]/40 rounded font-mono-sm text-mono-sm text-[#FE0000]">Adobe
+                                After Effects</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-secondary">Keyframe
+                                Motion</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#111111] border border-[#262626] rounded font-mono-sm text-mono-sm text-secondary">Visual
+                                Communications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 4. PROJECTS SECTION -->
+        <section class="py-24 border-b border-[#262626] bg-[#0A0A0A]" id="projects">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+                    <div>
+                        <div class="font-mono-sm text-mono-sm text-[#FE0000] tracking-widest uppercase">03 // SELECTED
+                            WORKS</div>
+                        <h2
+                            class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-[#F5F5F5] mt-1">
+                            Featured Projects
+                        </h2>
+                    </div>
+                    <div class="font-mono-sm text-mono-sm text-secondary/70">
+                        SHOWING 04 ARCHITECTURAL NODES
+                    </div>
+                </div>
+                <!-- 2x2 Bento/Matrix Project Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- PROJECT 01: SIGNAL STREET -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl overflow-hidden hover:border-[#333333] transition-all flex flex-col justify-between group">
+                        <div>
+                            <!-- Code pane header -->
+                            <div
+                                class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-label-meta text-label-meta text-[#FE0000]">PRJ_01</span>
+                                    <span class="text-[#262626]">/</span>
+                                    <span
+                                        class="font-label-meta text-label-meta text-secondary/80">signal_street.sim</span>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-emerald-400 border border-emerald-900/60 bg-emerald-950/20 px-2 py-0.5 rounded">Complete
+                                    / Interactive</span>
+                            </div>
+                            <!-- High-Fidelity Mock Interface for 2D Simulation -->
+                            <div class="p-6 bg-[#0E0E0E]/60 border-b border-[#262626]">
+                                <div
+                                    class="bg-[#111111] border border-[#262626] rounded p-4 relative overflow-hidden font-mono-sm text-mono-sm">
+                                    <div
+                                        class="flex justify-between items-center text-xs text-secondary/60 pb-2 border-b border-[#201f1f]">
+                                        <span>HUD: SPEED 42 KM/H</span>
+                                        <span class="text-[#FE0000]">TRAFFIC_LIGHT: [RED] STOP</span>
+                                    </div>
+                                    <div class="py-6 flex flex-col items-center justify-center gap-2">
+                                        <div class="flex items-center gap-3">
+                                            <span
+                                                class="material-symbols-outlined text-[#FE0000] text-3xl">two_wheeler</span>
+                                            <span
+                                                class="material-symbols-outlined text-secondary/40 text-2xl">arrow_forward</span>
+                                            <span
+                                                class="material-symbols-outlined text-tertiary text-2xl">traffic</span>
+                                        </div>
+                                        <span
+                                            class="font-label-meta text-label-meta text-secondary/60 tracking-wider mt-2">//
+                                            2D PHYSICS TICK: 60FPS STABLE</span>
+                                    </div>
+                                    <div
+                                        class="flex justify-between items-center text-[10px] text-secondary/40 pt-2 border-t border-[#201f1f]">
+                                        <span>COLLIDER: ACTIVE</span>
+                                        <span>MISSION: DELIVERY TIMEOUT 02:45</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Body -->
+                            <div class="p-6">
+                                <h3
+                                    class="font-headline-md text-headline-md text-[#F5F5F5] group-hover:text-[#FE0000] transition-colors">
+                                    SIGNAL STREET
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed">
+                                    2D pixel-art top-down motorcycle delivery game dengan konsep edukasi keselamatan dan
+                                    aturan lalu lintas. Mengintegrasikan kalkulasi akselerasi, sistem persimpangan
+                                    berlampu, dan manajemen waktu pengiriman barang.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Bottom Stack & Actions -->
+                        <div class="px-6 pb-6 pt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">Unity</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-on-surface">C#
+                                    Scripting</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-secondary">2D
+                                    Pixel Mechanics</span>
+                            </div>
+                            <div class="pt-3 border-t border-[#262626] flex justify-between items-center">
+                                <span class="font-label-meta text-label-meta text-secondary/60">ENGINE: UNITY 2022
+                                    LTS</span>
+                                <a class="inline-flex items-center gap-1 font-mono-sm text-mono-sm text-[#FE0000] hover:underline"
+                                    href="#contact">
+                                    <span>Inspect Spec</span>
+                                    <span class="material-symbols-outlined text-xs">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 02: LARAVEL API -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl overflow-hidden hover:border-[#333333] transition-all flex flex-col justify-between group">
+                        <div>
+                            <!-- Code pane header -->
+                            <div
+                                class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-label-meta text-label-meta text-[#FE0000]">PRJ_02</span>
+                                    <span class="text-[#262626]">/</span>
+                                    <span
+                                        class="font-label-meta text-label-meta text-secondary/80">laravel_service.routes</span>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-[#FE0000] border border-[#FE0000]/30 bg-[#FE0000]/10 px-2 py-0.5 rounded">Production
+                                    / Architecture</span>
+                            </div>
+                            <!-- Endpoint / Schema Preview Diagram -->
+                            <div class="p-6 bg-[#0E0E0E]/60 border-b border-[#262626]">
+                                <div
+                                    class="bg-[#111111] border border-[#262626] rounded p-4 font-mono-sm text-mono-sm flex flex-col gap-2">
+                                    <div class="flex items-center justify-between text-xs">
+                                        <span class="text-emerald-400 font-semibold">POST /api/v1/auth/login</span>
+                                        <span class="text-secondary/60">200 OK [Bearer Sanctum]</span>
+                                    </div>
+                                    <div
+                                        class="text-[11px] text-secondary/80 pl-3 border-l-2 border-[#FE0000]/60 my-1 font-mono-sm">
+                                        { "token": "7|qL89...auth_sec", "role": "sys_admin" }
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between text-xs pt-1 border-t border-[#201f1f]">
+                                        <span class="text-[#FE0000] font-semibold">GET /api/v1/records?limit=25</span>
+                                        <span class="text-secondary/60">Indexed query: 12ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Body -->
+                            <div class="p-6">
+                                <h3
+                                    class="font-headline-md text-headline-md text-[#F5F5F5] group-hover:text-[#FE0000] transition-colors">
+                                    LARAVEL API
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed">
+                                    RESTful API backend service featuring secure token authentication (Sanctum) and full
+                                    CRUD endpoints for scalable application data management. Designed with structured
+                                    route grouping, request validation, and database transactions.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Bottom Stack & Actions -->
+                        <div class="px-6 pb-6 pt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">PHP</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">Laravel</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-on-surface">MySQL</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-secondary">Sanctum
+                                    Token</span>
+                            </div>
+                            <div class="pt-3 border-t border-[#262626] flex justify-between items-center">
+                                <span class="font-label-meta text-label-meta text-secondary/60">ENDPOINT: REST /
+                                    JSON</span>
+                                <a class="inline-flex items-center gap-1 font-mono-sm text-mono-sm text-[#FE0000] hover:underline"
+                                    href="#contact">
+                                    <span>View Documentation</span>
+                                    <span class="material-symbols-outlined text-xs">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 03: WEB PROJECT (KOS FINDER) -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl overflow-hidden hover:border-[#333333] transition-all flex flex-col justify-between group">
+                        <div>
+                            <!-- Code pane header -->
+                            <div
+                                class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-label-meta text-label-meta text-[#FE0000]">PRJ_03</span>
+                                    <span class="text-[#262626]">/</span>
+                                    <span
+                                        class="font-label-meta text-label-meta text-secondary/80">kos_finder.portal</span>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-emerald-400 border border-emerald-900/60 bg-emerald-950/20 px-2 py-0.5 rounded">Deployed</span>
+                            </div>
+                            <!-- Search/Dashboard Preview Interface -->
+                            <div class="p-6 bg-[#0E0E0E]/60 border-b border-[#262626]">
+                                <div
+                                    class="bg-[#111111] border border-[#262626] rounded p-4 font-mono-sm text-mono-sm flex flex-col gap-2.5">
+                                    <div
+                                        class="flex items-center gap-2 px-3 py-1.5 bg-[#151515] border border-[#262626] rounded text-secondary/60 text-xs">
+                                        <span class="material-symbols-outlined text-sm text-[#FE0000]">search</span>
+                                        <span>Filter: Radius &lt; 2km | AC | WiFi | Price: Low-High</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                                        <div
+                                            class="p-2 bg-[#181818] border border-[#262626] rounded flex justify-between">
+                                            <span class="text-on-surface">Wisma Graha #1</span>
+                                            <span class="text-emerald-400 font-mono-sm">Avail (2)</span>
+                                        </div>
+                                        <div
+                                            class="p-2 bg-[#181818] border border-[#262626] rounded flex justify-between">
+                                            <span class="text-on-surface">Puri Amanda #4</span>
+                                            <span class="text-secondary/60 font-mono-sm">Full</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Body -->
+                            <div class="p-6">
+                                <h3
+                                    class="font-headline-md text-headline-md text-[#F5F5F5] group-hover:text-[#FE0000] transition-colors">
+                                    WEB PROJECT (KOS FINDER)
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed">
+                                    Website project untuk membantu pencarian dan manajemen informasi kos di sekitar area
+                                    sekolah dan kampus dengan filter dinamis dan integrasi database relasional untuk
+                                    ketersediaan kamar.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Bottom Stack & Actions -->
+                        <div class="px-6 pb-6 pt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">Web
+                                    Development</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-on-surface">Database
+                                    Integration</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-secondary">Dynamic
+                                    Filters</span>
+                            </div>
+                            <div class="pt-3 border-t border-[#262626] flex justify-between items-center">
+                                <span class="font-label-meta text-label-meta text-secondary/60">STACK: FULL WEB
+                                    APP</span>
+                                <a class="inline-flex items-center gap-1 font-mono-sm text-mono-sm text-[#FE0000] hover:underline"
+                                    href="#contact">
+                                    <span>Explore Architecture</span>
+                                    <span class="material-symbols-outlined text-xs">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 04: CREATIVE VIDEO EDITING -->
+                    <div
+                        class="bg-[#151515] border border-[#262626] rounded-xl overflow-hidden hover:border-[#333333] transition-all flex flex-col justify-between group">
+                        <div>
+                            <!-- Code pane header -->
+                            <div
+                                class="h-10 bg-[#0E0E0E] px-4 flex items-center justify-between border-b border-[#262626]">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-label-meta text-label-meta text-[#FE0000]">PRJ_04</span>
+                                    <span class="text-[#262626]">/</span>
+                                    <span
+                                        class="font-label-meta text-label-meta text-secondary/80">creative_media.render</span>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-tertiary border border-tertiary/40 bg-tertiary-container/20 px-2 py-0.5 rounded">Published</span>
+                            </div>
+                            <!-- Timeline & Keyframe Preview Interface -->
+                            <div class="p-6 bg-[#0E0E0E]/60 border-b border-[#262626]">
+                                <div
+                                    class="bg-[#111111] border border-[#262626] rounded p-4 font-mono-sm text-mono-sm flex flex-col gap-2">
+                                    <div class="flex justify-between items-center text-xs text-secondary/60">
+                                        <span>TRACK 01 [AUDIO_SYNC_BEAT]</span>
+                                        <span class="text-tertiary">BÉZIER CURVE</span>
+                                    </div>
+                                    <div class="space-y-1.5 py-1">
+                                        <div class="h-2 w-full bg-[#1c1b1b] rounded overflow-hidden flex">
+                                            <div class="bg-[#FE0000]/80 w-1/4 h-full"></div>
+                                            <div class="bg-tertiary/80 w-2/5 h-full border-l border-black"></div>
+                                            <div class="bg-[#FE0000]/50 w-1/3 h-full border-l border-black"></div>
+                                        </div>
+                                        <div class="h-2 w-full bg-[#1c1b1b] rounded overflow-hidden flex">
+                                            <div class="bg-[#353534] w-2/3 h-full"></div>
+                                            <div class="bg-[#FE0000] w-1/3 h-full border-l border-black"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center text-[10px] text-secondary/40">
+                                        <span>RENDER: 1080p 60FPS</span>
+                                        <span>LUT: HIGH CONTRAST MATTE</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Body -->
+                            <div class="p-6">
+                                <h3
+                                    class="font-headline-md text-headline-md text-[#F5F5F5] group-hover:text-[#FE0000] transition-colors">
+                                    CREATIVE VIDEO EDITING
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary mt-2 leading-relaxed">
+                                    Karya dan produksi editing video untuk kebutuhan branding media organisasi dan
+                                    eksplorasi visual personal. Menekankan ketepatan ritme timeline, color grading, dan
+                                    motion graphics bersih.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Bottom Stack & Actions -->
+                        <div class="px-6 pb-6 pt-2 flex flex-col gap-4">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">CapCut</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-[#FE0000]">Adobe
+                                    After Effects</span>
+                                <span
+                                    class="px-2 py-1 bg-[#111111] border border-[#262626] rounded font-label-meta text-label-meta text-secondary">Motion
+                                    Keyframing</span>
+                            </div>
+                            <div class="pt-3 border-t border-[#262626] flex justify-between items-center">
+                                <span class="font-label-meta text-label-meta text-secondary/60">MEDIA: DIGITAL
+                                    BRANDING</span>
+                                <a class="inline-flex items-center gap-1 font-mono-sm text-mono-sm text-[#FE0000] hover:underline"
+                                    href="#contact">
+                                    <span>View Details</span>
+                                    <span class="material-symbols-outlined text-xs">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 5. EXPERIENCE & TIMELINE SECTION -->
+        <section class="py-24 border-b border-[#262626] bg-[#0E0E0E]" id="experience">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <!-- Header -->
+                <div class="flex flex-col gap-2 mb-12">
+                    <div class="font-mono-sm text-mono-sm text-[#FE0000] tracking-widest uppercase">04 // TIMELINE</div>
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-[#F5F5F5]">
+                        Experience &amp; Activities
+                    </h2>
+                    <p class="font-body-md text-body-md text-secondary">
+                        Operational trajectory across organization media systems and technical internships.
+                    </p>
+                </div>
+                <!-- Structured Vertical Timeline -->
+                <div class="relative border-l border-[#262626] ml-4 md:ml-8 pl-8 md:pl-12 flex flex-col gap-12">
+                    <!-- Entry 1: media.tjkt -->
+                    <div class="relative">
+                        <!-- Timeline Node Indicator -->
+                        <div
+                            class="absolute -left-[41px] md:-left-[57px] top-1.5 w-4 h-4 rounded-full bg-[#111111] border-2 border-[#FE0000] flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#FE0000]"></div>
+                        </div>
+                        <div
+                            class="bg-[#151515] border border-[#262626] rounded-xl p-6 md:p-8 hover:border-[#333333] transition-all">
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 border-b border-[#262626] mb-4">
+                                <div>
+                                    <span class="font-label-meta text-label-meta text-[#FE0000]">ORGANIZATION
+                                        MEDIA</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-[#F5F5F5] mt-0.5">media.tjkt</h3>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="font-mono-sm text-mono-sm text-secondary bg-[#111111] border border-[#262626] px-3 py-1 rounded">
+                                        Active Organization
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-y-3 font-body-md text-body-md text-secondary">
+                                <div class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-[#FE0000] text-base mt-0.5">check_circle</span>
+                                    <span><strong>Role:</strong> Video Editing &amp; Creative Media Production.</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-[#FE0000] text-base mt-0.5">check_circle</span>
+                                    <span><strong>Activities:</strong> Content Production, Motion Graphics, Creative
+                                        Media Management.</span>
+                                </div>
+                                <p class="text-secondary/80 pt-2 border-t border-[#1F1F1F]">
+                                    Bertanggung jawab merancang konsep audio-visual, menyelaraskan grafis informatif
+                                    terkait kegiatan jurusan, serta mengelola alur pasca-produksi media sosial dengan
+                                    standar kualitas yang konsisten.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Entry 2: Praktik Kerja Lapangan (PKL) Placeholder as mandated -->
+                    <div class="relative">
+                        <!-- Timeline Node Indicator -->
+                        <div
+                            class="absolute -left-[41px] md:-left-[57px] top-1.5 w-4 h-4 rounded-full bg-[#111111] border-2 border-outline-variant flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+                        </div>
+                        <div class="bg-[#151515]/70 border border-[#262626] rounded-xl p-6 md:p-8 border-dashed">
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between gap-2 pb-4 border-b border-[#262626] mb-4">
+                                <div>
+                                    <span class="font-label-meta text-label-meta text-secondary/60">VOCATIONAL
+                                        APPRENTICESHIP</span>
+                                    <h3 class="font-headline-sm text-headline-sm text-[#F5F5F5] mt-0.5">Praktik Kerja
+                                        Lapangan (PKL)</h3>
+                                </div>
+                                <span
+                                    class="font-label-meta text-label-meta text-secondary/70 bg-[#111111] border border-[#262626] px-3 py-1 rounded">
+                                    // Upcoming Placement
+                                </span>
+                            </div>
+                            <div class="space-y-2 font-mono-sm text-mono-sm text-secondary/70">
+                                <div class="text-[#FE0000] font-mono-sm">
+                                    // Details to be announced / Upcoming industry placement
+                                </div>
+                                <div class="text-secondary/80 font-body-md text-body-md">
+                                    Role: IT &amp; Systems Support Apprentice. Penempatan industri resmi untuk
+                                    implementasi tata kelola infrastruktur jaringan dan pemeliharaan sistem terpadu.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 6. CONTACT SECTION -->
+        <section class="py-24 border-b border-[#262626] bg-[#0A0A0A]" id="contact">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Headline & Pitch -->
+                    <div class="lg:col-span-6 flex flex-col gap-6">
+                        <div class="font-mono-sm text-mono-sm text-[#FE0000] tracking-widest uppercase">05 // CONNECT
+                        </div>
+                        <h2
+                            class="font-headline-lg-mobile md:font-display text-headline-lg-mobile md:text-display text-[#F5F5F5] leading-tight">
+                            Let’s build something.
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            Have a project, opportunity, or want to discuss systems, software, and backend
+                            architectures? Get in touch directly via email or social repository channels.
+                        </p>
+                        <div class="font-mono-sm text-mono-sm text-secondary/70 italic">
+                            // “masi ada hari besok” — Mohammad Ali Ridho
+                        </div>
+                        <!-- Primary Action Button: Send an Email -->
+                        <div class="pt-4">
+                            <a class="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-[#FE0000] text-white font-mono-lg text-mono-lg hover:bg-[#D90000] transition-all shadow-[0_4px_20px_-2px_rgba(254,0,0,0.25)] active:scale-95"
+                                href="mailto:muhammadaliridho125@gmail.com">
+                                <span>Send an Email</span>
+                                <span class="material-symbols-outlined text-base">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Direct Contact Cards -->
+                    <div class="lg:col-span-6 flex flex-col gap-4">
+                        <!-- Email Card -->
+                        <div
+                            class="bg-[#151515] border border-[#262626] rounded-xl p-5 hover:border-[#333333] transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-[#111111] border border-[#262626] flex items-center justify-center text-[#FE0000]">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div>
+                                    <span class="font-label-meta text-label-meta text-secondary/60 block">DIRECT
+                                        ELECTRONIC MAIL</span>
+                                    <a class="font-mono-sm text-mono-sm text-on-surface hover:text-[#FE0000] transition-colors"
+                                        href="mailto:muhammadaliridho125@gmail.com">
+                                        muhammadaliridho125@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="p-2 border border-[#262626] rounded hover:border-[#FE0000] text-secondary hover:text-[#FE0000] transition-colors"
+                                href="mailto:muhammadaliridho125@gmail.com" title="Mailto">
+                                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                        <!-- GitHub Card -->
+                        <div
+                            class="bg-[#151515] border border-[#262626] rounded-xl p-5 hover:border-[#333333] transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-[#111111] border border-[#262626] flex items-center justify-center text-[#FE0000]">
+                                    <span class="material-symbols-outlined">code</span>
+                                </div>
+                                <div>
+                                    <span class="font-label-meta text-label-meta text-secondary/60 block">VERSION
+                                        CONTROL &amp; CODE</span>
+                                    <a class="font-mono-sm text-mono-sm text-on-surface hover:text-[#FE0000] transition-colors"
+                                        href="https://github.com/Sype212" rel="noopener noreferrer" target="_blank">
+                                        github.com/Sype212
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="p-2 border border-[#262626] rounded hover:border-[#FE0000] text-secondary hover:text-[#FE0000] transition-colors"
+                                href="https://github.com/Sype212" rel="noopener noreferrer" target="_blank"
+                                title="External GitHub Link">
+                                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                        <!-- Instagram Card -->
+                        <div
+                            class="bg-[#151515] border border-[#262626] rounded-xl p-5 hover:border-[#333333] transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-[#111111] border border-[#262626] flex items-center justify-center text-[#FE0000]">
+                                    <span class="material-symbols-outlined">photo_camera</span>
+                                </div>
+                                <div>
+                                    <span class="font-label-meta text-label-meta text-secondary/60 block">VISUAL MEDIA
+                                        &amp; SOCIAL</span>
+                                    <span class="font-mono-sm text-mono-sm text-on-surface">
+                                        @Lizt.aep
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-2 border border-[#262626] rounded text-secondary/60">
+                                <span class="material-symbols-outlined text-sm">alternate_email</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ================= FOOTER (Shared Components JSON Anchor) ================= -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest docked full-width bottom border-t border-outline-variant dark:border-outline-variant">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-8 max-w-7xl mx-auto gap-4">
+            <!-- Brand & Copyright from JSON -->
+            <div class="flex flex-col gap-1 text-center md:text-left">
+                <span class="font-mono-sm text-mono-sm text-on-surface dark:text-on-surface">
+                    Mohammad Ali Ridho — Software Engineering &amp; System Builder
+                </span>
+                <span class="font-label-meta text-label-meta text-secondary">
+                    © 2025 Mohammad Ali Ridho. All rights reserved. System built with precision.
+                </span>
+                <span class="font-label-meta text-label-meta text-secondary/50 italic">
+                    // “masi ada hari besok”
+                </span>
+            </div>
+            <!-- Links from JSON -->
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="https://github.com/Sype212" rel="noopener noreferrer" target="_blank">GitHub</a>
+                <a class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150"
+                    href="mailto:muhammadaliridho125@gmail.com">Email</a>
+                <span
+                    class="text-secondary dark:text-secondary font-mono-sm text-mono-sm hover:text-[#FE0000] dark:hover:text-[#FE0000] transition-colors duration-150 cursor-default">Instagram</span>
+                <div class="flex items-center gap-2 pl-2 border-l border-outline-variant/60">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span class="text-on-surface dark:text-on-surface font-mono-sm text-mono-sm">Status: Active</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
